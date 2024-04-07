@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess Price</title>
+</head>
+<body>
+    <h2>Gussing Price</h2>
+
+<form action="/car/guess" method="post">
+    {% csrf_token %} 
+  <label for="model">Model:</label><br>
+  <input type="text" id="model" name="model"><br>
+  <label for="milage">Milage:</label><br>
+  <input type="text" id="milage" name="milage"><br><br>
+  <label for="year">Year:</label><br>
+  <input type="text" id="year" name="year"><br><br>
+  <input type="submit" value="Submit">
+</form>
+    <h3>result<h3>
+        <p>{{gussed_price}}
+</body>
+</html>
